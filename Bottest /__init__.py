@@ -37,11 +37,11 @@ logger = logging.getLogger(__name__)
 
 
 rani = Application.builder().token(TOKEN).build()
-asyncio.get_event_loop().run_until_complete(Per.bot.initialize())
+asyncio.get_event_loop().run_until_complete(rani.bot.initialize())
 
 
-BOT_ID = Per.bot.id
-BOT_USERNAME = Per.bot.username
+BOT_ID = rani.bot.id
+BOT_USERNAME = rani.bot.username
 
 print("ɪɴғᴏ: ʙᴏᴛᴛɪɴɢ ʏᴏᴜʀ ᴄʟɪᴇɴᴛ")
 print("sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴏᴀᴅᴇᴅ ᴍᴏᴅᴜʟᴇs -: " + str(ALL_MODULES))
