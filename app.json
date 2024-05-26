@@ -15,7 +15,7 @@
      "MONGO_DB_URL": {
         "description": "ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴅᴀᴛᴀʙᴀsᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴs. cloud.mongodb.com /ɪғ ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ʟᴇᴀᴠᴇ ɪᴛ",
         "required": false,
-        "value": "mongodb+srv://bsdk:betichod@cluster0.fgj1r9z.mongodb.net/?retryWrites=true&w=majority"
+        "value": "mongodb://clve73lfu001ha4me1al6gw90:UTfT7DjJGjwyvbdXaM1hDrVj@104.251.218.202:9013/?readPreference=primary&ssl=false"
      },
     "NO_LOAD": {
       "description": "ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɴᴏ ʟᴏᴀᴅ ᴀɴʏ ᴍᴏᴅᴜʟᴇ's /ʟᴇᴀᴠᴇ ɪᴛ ᴀs ɪᴛ ᴀs ",
