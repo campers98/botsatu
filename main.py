@@ -5,8 +5,8 @@ import time
 
 from telegram.ext import ApplicationBuilder
 from config import TOKEN
-from AsuX.modules import ALL_MODULES
-from AsuX.handlers.chatbot import add_chatbot_handlers
+from Bottest.modules import ALL_MODULES
+from Bottest.handlers.chatbot import add_chatbot_handlers
 
 StartTime = time.time()
 
@@ -22,7 +22,7 @@ application = ApplicationBuilder().token(TOKEN).build()
 
 # Load all modules
 for module_name in ALL_MODULES:
-    importlib.import_module(f"AsuX.modules.{module_name}")
+    importlib.import_module(f"Bottest.modules.{module_name}")
 
 # Add chatbot handlers
 add_chatbot_handlers(application)
