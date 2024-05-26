@@ -1,5 +1,3 @@
-#bottest
-
 import asyncio
 import importlib
 import logging
