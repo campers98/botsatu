@@ -1,28 +1,38 @@
-"""
-ɢɪᴛʜᴜʙ -: Abishnoi69
-ᴛᴇʟᴇɢʀᴀᴍ -: @Abishnoi1M / @Abishnoi_bots 
-"""
-
-
+import asyncio
 import importlib
+import logging
+import time
+import os
 
-from telegram import Update
-
-from BOTSATU import rani
+from telegram.ext import ApplicationBuilder
+from config import TOKEN
 from BOTSATU.modules import ALL_MODULES
+from BOTSATU.handlers.chatbot import add_chatbot_handlers
 
+StartTime = time.time()
 
-def main():
-    rani.run_polling(
-        timeout=15,
-        drop_pending_updates=True,
-        allowed_updates=Update.ALL_TYPES,
-        stop_signals=None,
-    )
+# Enable logging
+logging.basicConfig(
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
+)
 
+logger = logging.getLogger(__name__)
 
-if __name__ == "__main__":
-    for Abishnoi in ALL_MODULES:
-        importlib.import_module("BOTSATU.modules." + Abishnoi)
-    main()
-    print("ᴏ ғᴜ*ᴋ  ᴡʜᴇɴ ᴛᴜʀɴ ᴏɴ ᴍᴇ ᴀɢᴀɪɴ 🤔")
+# Create the application
+application = ApplicationBuilder().token(TOKEN).build()
+
+# Load all modules
+for module_name in ALL_MODULES:
+    importlib.import_module(f"botsatu.modules.{module_name}")
+
+# Add chatbot handlers
+add_chatbot_handlers(application)
+
+async def main():
+    # Run the bot until the user sends a signal to stop
+    await application.start()
+    await application.updater.start_polling()
+    await application.idle()
+
+if __name__ == '__main__':
+    asyncio.run(main())
