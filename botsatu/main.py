@@ -8,8 +8,8 @@ import importlib
 
 from telegram import Update
 
-from botsatu import Per
-from botsatu.modules import ALL_MODULES
+from BOTSATU import rani
+from BOTSATU.modules import ALL_MODULES
 
 
 def main():
@@ -23,6 +23,6 @@ def main():
 
 if __name__ == "__main__":
     for Abishnoi in ALL_MODULES:
-        importlib.import_module("botsatu.modules." + Abishnoi)
+        importlib.import_module("BOTSATU.modules." + Abishnoi)
     main()
     print("ᴏ ғᴜ*ᴋ  ᴡʜᴇɴ ᴛᴜʀɴ ᴏɴ ᴍᴇ ᴀɢᴀɪɴ 🤔")
