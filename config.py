@@ -3,3 +3,5 @@ MONGO_DB_URL = "mongodb://clve73lfu001ha4me1al6gw90:UTfT7DjJGjwyvbdXaM1hDrVj@104
 AI_API_KEY = "7Y5hgMnlTjtjCyz0"
 AI_BID = "182191"
 BOT_USERNAME = "Minisvd_bot"
+LOAD = getenv("LOAD", "").split()
+NO_LOAD = getenv("NO_LOAD", "False").split()
