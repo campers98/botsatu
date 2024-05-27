@@ -15,7 +15,7 @@ import time
 from telegram import Update
 from telegram.ext import Application
 
-from Bottest.modules import ALL_MODULES
+from botsatu.modules import ALL_MODULES
 from config import MONGO_DB_URL, TOKEN
 
 TOKEN = TOKEN
